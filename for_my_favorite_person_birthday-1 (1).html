@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Favorite Person ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;background:#100b1f;color:#fff;overflow-x:hidden}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;position:relative}
+.card{width:min(760px,100%);text-align:center;position:relative;z-index:2}
+.heart{position:fixed;font-size:22px;animation:float 8s linear infinite;opacity:.7;pointer-events:none}
+@keyframes float{0%{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-15vh) rotate(360deg);opacity:0}}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:#f7a9c4;font:12px Arial,sans-serif}
+h1{font-size:clamp(48px,12vw,92px);line-height:.95;margin:18px 0 10px;font-weight:400}
+.script{font-style:italic;color:#ff9dbc}
+.subtitle{font-size:18px;line-height:1.8;color:#e9dfea;max-width:560px;margin:20px auto}
+button{border:0;border-radius:999px;padding:15px 28px;background:#e85d8d;color:#fff;font-size:16px;cursor:pointer;box-shadow:0 10px 35px #e85d8d44;transition:.25s}
+button:hover{transform:translateY(-2px);box-shadow:0 14px 40px #e85d8d66}
+.hidden{display:none}.reveal{animation:fade .8s ease}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.section{background:#fff1f6;color:#251525;border-radius:28px;padding:30px 22px;margin-top:26px;box-shadow:0 20px 70px #0005}
+.section h2{font-size:30px;font-weight:400;margin:0 0 12px}.section p{line-height:1.8}
+.reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.reason{background:#ffe0eb;padding:15px;border-radius:16px}
+.counter{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+.time{min-width:90px;padding:14px;border:1px solid #ffffff2a;border-radius:18px;background:#ffffff0d}
+.time b{display:block;font:700 30px Arial}.time span{font:11px Arial;color:#d9cbdc}
+.note{font-size:19px}.signature{color:#e85d8d;font-style:italic;font-size:24px}
+#surprise{font-size:21px;line-height:1.9}
+.small{font:12px Arial;color:#bcaebe;margin-top:25px}
+@media(max-width:520px){.reasons{grid-template-columns:1fr}.section{padding:25px 17px}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<section class="page">
+<div class="card">
+<div class="kicker">A little something made just for you</div>
+<h1>Happy Birthday<br><span class="script">My Love ❤️</span></h1>
+<p class="subtitle">
+I didn't want to give you just another birthday wish.<br>
+I wanted to give you a little place on the internet that exists only because <b>you exist.</b>
+</p>
+<button onclick="start()">Open this, birthday girl ♡</button>
+
+<div id="content" class="hidden">
+  <div class="section reveal">
+    <h2>Before your birthday arrives…</h2>
+    <p class="note">
+      There are millions of people in this world, but somehow my life got lucky enough
+      to find <b>you</b>. And honestly, that's one of my favorite things about my life.
+    </p>
+    <p>
+      I hope you never forget how loved, appreciated and special you are —
+      not only on 30 August, but on all the ordinary days too.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>30 August is getting closer 🎂</h2>
+    <p>And while the world sees it as just another date… I see the day my favorite person was born.</p>
+    <div class="counter">
+      <div class="time"><b id="d">--</b><span>DAYS</span></div>
+      <div class="time"><b id="h">--</b><span>HOURS</span></div>
+      <div class="time"><b id="m">--</b><span>MINUTES</span></div>
+      <div class="time"><b id="s">--</b><span>SECONDS</span></div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <h2>Things I hope you always remember 💗</h2>
+    <div class="reasons">
+      <div class="reason">Your smile can change my whole mood.</div>
+      <div class="reason">You make ordinary moments feel special.</div>
+      <div class="reason">You deserve to be celebrated, loudly.</div>
+      <div class="reason">You never have to earn my love.</div>
+      <div class="reason">I'm proud of the person you are.</div>
+      <div class="reason">You are one of my favorite parts of life.</div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <h2>One little promise 🤍</h2>
+    <p class="note">
+      I can't promise that every day will be perfect.
+      But I can promise that I'll keep choosing you,
+      keep making memories with you, keep annoying you 😂,
+      and keep trying to make you smile.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Okay… one last thing 👀</h2>
+    <p>There is something I really want you to read.</p>
+    <button onclick="surprise()">Tap for your surprise ❤️</button>
+    <div id="surprise" class="hidden">
+      <p>
+      If you ever have a day where you don't feel beautiful, important,
+      or loved enough, come back here.
+      </p>
+      <p>
+      Read this again and remember:<br>
+      <b>You are someone's favorite person.</b><br>
+      <b>You are someone's safe place.</b><br>
+      <b>You are deeply, genuinely loved.</b>
+      </p>
+      <p class="signature">And that someone is me. ❤️</p>
+      <p>Happy Birthday in advance, my girl. 🥹</p>
+    </div>
+  </div>
+  <div class="small">Made with love • 30 August 2026 • just for you ❤️</div>
+</div>
+</div>
+</section>
+
+<script>
+function start(){
+ document.getElementById('content').classList.remove('hidden');
+ window.scrollTo({top:window.innerHeight*.45,behavior:'smooth'});
+}
+function surprise(){
+ document.getElementById('surprise').classList.remove('hidden');
+}
+function tick(){
+ const target=new Date('2026-08-30T00:00:00+05:00').getTime();
+ let diff=Math.max(0,target-Date.now());
+ const d=Math.floor(diff/86400000); diff%=86400000;
+ const h=Math.floor(diff/3600000); diff%=3600000;
+ const m=Math.floor(diff/60000); const s=Math.floor(diff/1000)%60;
+ document.getElementById('d').textContent=d;
+ document.getElementById('h').textContent=String(h).padStart(2,'0');
+ document.getElementById('m').textContent=String(m).padStart(2,'0');
+ document.getElementById('s').textContent=String(s).padStart(2,'0');
+}
+setInterval(tick,1000);tick();
+
+for(let i=0;i<22;i++){
+ const e=document.createElement('div');e.className='heart';e.textContent=['♥','♡','✦'][i%3];
+ e.style.left=Math.random()*100+'vw';e.style.animationDelay=(Math.random()*8)+'s';
+ e.style.animationDuration=(6+Math.random()*7)+'s';document.getElementById('hearts').appendChild(e);
+}
+</script>
+</body>
+</html>
